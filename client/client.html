@@ -1,0 +1,15 @@
+<head>
+  <title>Kijiji Scraper</title>
+</head>
+
+<body>
+{{> results}}
+</body>
+
+<template name="results">
+  <ul>
+  {{#each result}}
+    <li><strong>{{ name }}</strong> {{ description }}</li>
+  {{/each}}
+  </ul>
+</template>
