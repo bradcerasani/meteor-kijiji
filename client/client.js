@@ -10,11 +10,11 @@ var dataArr = [
 ]
 
 Template.results.result = function() {
-  return dataArr;
+  return Session.get('q');
 }
 
-return Meteor.call("getTime", function(err, res) {
-  return res;
+Meteor.call("getTime", function(err, res) {
+  Session.set('q', res);
 });
 
 
