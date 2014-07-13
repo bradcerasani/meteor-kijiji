@@ -1,5 +1,15 @@
 <head>
   <title>Kijiji Scraper</title>
+  <style>
+  body {
+    width: 800px;
+    margin: 0 auto;
+  }
+  img {
+    display: block;
+    margin-bottom: 1em;
+  }
+  </style>
 </head>
 
 <body>
@@ -7,10 +17,14 @@
 </body>
 
 <template name="results">
-  {{result}}
-  <!-- <ul>
-  {{#each result}}
-    <li><strong>{{ name }}</strong> {{ description }}</li>
+  <ul>
+  {{#each listing}}
+    <li>
+      <h1>{{title}}</h1>
+      <img src="{{image}}" alt="">
+      <small>{{id}}</small>
+      <p>{{{description}}}</p>
+    </li>
   {{/each}}
-  </ul> -->
+  </ul>
 </template>

@@ -9,7 +9,7 @@ var dataArr = [
   }
 ]
 
-Template.results.result = function() {
+Template.results.listing = function() {
   return Session.get('q');
 }
 
