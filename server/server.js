@@ -1,4 +1,5 @@
 var cheerio = Meteor.require('cheerio');
+var moment = Meteor.require('moment');
 
 Meteor.methods({
   getTime: function() {
@@ -13,7 +14,7 @@ Meteor.methods({
         price: $(this).find('.price').text(),
         image: [],
         url: "",
-        posted: $(this).find('.posted').text(),
+        posted: moment($(this).find('.posted').text(), "DD/MM/YYYY").fromNow(),
       });
     });
     return listing;
