@@ -10,10 +10,10 @@ Meteor.methods({
         id: "",
         title: $(this).find('.title').text(),
         description: $(this).find('.description p').text(),
-        // price: $(this).find('.price').text(),
+        price: $(this).find('.price').text(),
         image: [],
         url: "",
-        // posted: $(this).find('.posted'),
+        posted: $(this).find('.posted').text(),
       });
     });
     return listing;
